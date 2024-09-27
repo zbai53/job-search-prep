@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AsusPage</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        flex-direction: column; 
+        /* align-items: center; */
+        height: 100%;
+        width: 100%;
+        
+    }
+
+    .top-container {
+        display: flex; 
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .carousel-container {
+        
+        width: 1000px;
+        position: relative;
+        text-align: center;
+        margin-right: 10%;
+       
+    }
+
+    .carousel {
+        width: 100%;
+        width: 490px;
+        position: relative;
+        
+       
+        /* overflow: hidden; */
+        /* background-color: #f5f5f5; */
+    }
+
+    .carousel img {
+        width: 100%;
+        
+        position: absolute;
+        opacity: 0;
+        animation: slide-animation 22s infinite;
+    }
+
+    .carousel img:nth-child(1) {
+        animation-delay: 0s;
+    }
+
+    .carousel img:nth-child(2) {
+        animation-delay: 5s;
+    }
+
+    .carousel img:nth-child(3) {
+        animation-delay: 10s;
+    }
+
+    .carousel img:nth-child(4) {
+        animation-delay: 15s;
+    }
+
+   
+    
+
+    
+    @keyframes slide-animation {
+        0% {
+            opacity: 0;
+        }
+        6.33% {
+            opacity: 1;
+        }
+        16.88% {
+            opacity: 1;
+        }
+        30.88% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    .title{
+        margin-top: 100%;
+        text-align: center;
+        z-index: 1;
+        
+    }
+
+
+    .container1 {
+        /* display: flex; */
+        margin-top: 15%;
+        margin-left: 12%;
+        width: 36%;
+
+    }
+
+    .box1 {
+        width: 90%;
+        background-color: #f4f4f4; 
+        border: 1px solid #ddd; 
+        border-radius: 8px; 
+        padding: 5%; 
+        box-shadow: 0 5px 10px rgba(3, 3, 3, 0.1);
+        /* margin: 10%; */
+        text-align: center; 
+        
+    }
+
+    a {
+        text-decoration: none; 
+        color: rgb(129, 126, 126); 
+    }
+
+    .container2 {
+        /* display: grid; */
+        margin: 5%;
+        
+    }   
+
+
+    .box2 {
+        width: 100%;
+        background-color: #f4f4f4; 
+        border: 1px solid #ddd; 
+        border-radius: 8px; 
+        padding: 20px; 
+        box-shadow: 0 5px 10px rgba(3, 3, 3, 0.1); 
+        
+        
+    }
+    .text-t{
+        font-weight: 700;
+        font-size: larger;
+    }
+
+    .text-c{
+        font-weight: 400;
+        font-size: medium;
+    }
+
+</style>
+<body>
+
+    <div class="top-container">
+        <div class="carousel-containe">
+            <div class="carousel">
+                <img src="https://shop.asus.com/media/catalog/product/a/9/a95784c8de100abe8e27f6df93cc01b9_3.png?optimize=medium&bg-color=255,255,255&fit=bounds&height=439&width=439&canvas=439:439&dpr=2%202x" alt="Slide 1">
+                <img src="https://shop.asus.com/media/catalog/product/7/1/7197c964eadf73d443035975ae011925_3.png?optimize=medium&bg-color=255,255,255&fit=bounds&height=439&width=439&canvas=439:439&dpr=2%202x" alt="Slide 2">
+                <img src="https://shop.asus.com/media/catalog/product/5/a/5a71eadbf834ac41931d415f4e8b6ad4_4.png?optimize=medium&bg-color=255,255,255&fit=bounds&height=439&width=439&canvas=439:439&dpr=2%202x" alt="Slide 3">
+                <img src="https://shop.asus.com/media/catalog/product/f/8/f85475de5bb71834216f85d79dec7fba_6.png?optimize=medium&bg-color=255,255,255&fit=bounds&height=439&width=439&canvas=439:439&dpr=2%202x" alt="Slide 4">
+                
+            </div>
+            
+            <h2 class="title">ROG Strix G18 (2024)</h2>
+        </div>
+        
+        
+        
+        <div class="container1">
+           
+            <div class="box1">
+                
+                <h3>Model:ROG Strix G18 (2024)</h3>
+                <h3>Price: $2399.99 ~ 2999.00 CAD</h3>
+                <h3>Purchase Links: 
+                    <a href="https://shop.asus.com/ca-en/rog-strix-g18-2024.html">
+                        https://shop.asus.com/ca-en/rog-strix-g18-2024.html <br>
+                        (shop.asus.com refused to connect.)
+                    </a>
+                </h3>
+        
+            </div>
+        </div>
+    </div>
+     
+   
+
+    <div class="container2">
+        <div class="box2">
+            <p class="text-t">
+                Processor:
+                <p class="text-c">
+                    Intel® Core™ i9 Processor 14900HX 2.2 GHz (36MB Cache, up to 5.8 GHz, 24 cores, 32 Threads)
+                    
+                </p>
+            </p>
+
+            <p class="text-t">
+                Operating System:
+                <p class="text-c">
+                    Windows 11 Home
+
+                </p>
+            </p>
+
+            <p class="text-t">
+                Graphics:
+                <p class="text-c">
+                    NVIDIA® GeForce RTX™ 4060 Laptop GPU (233 AI TOPs)
+                    ROG Boost: 2420MHz* at 140W (2370MHz Boost Clock+50MHz OC, 115W+25W Dynamic Boost)
+                    8GB GDDR6   <br>
+                    NVIDIA® GeForce RTX™ 4070 Laptop GPU (321 AI TOPs)
+                    ROG Boost: 2225MHz* at 140W (2175MHz Boost Clock+50MHz OC, 115W+25W Dynamic Boost)
+                    8GB GDDR6
+                </p>
+            </p>
+
+            <p class="text-t">
+                Memory:
+                <p class="text-c">
+                    16GB DDR5-5600 SO-DIMM, the memory speed of the systems vary by CPU SPEC x 2
+                    Max Capacity: 32GB
+                    Support dual channel memory
+                </p>
+            </p>
+
+            <p class="text-t">
+                Storage:
+                <p class="text-c">
+                    1TB PCIe® 4.0 NVMe™ M.2 SSD
+                    2x DDR5 SO-DIMM slots
+                    2x M.2 PCIe
+                </p>
+            </p>
+
+            <p class="text-t">
+                Display:
+                <p class="text-c">
+                    18-inch
+                    2.5K (2560 x 1600, WQXGA) 16:10 aspect ratio
+                    IPS-level
+                    anti-glare display
+                    DCI-P3: 100%
+                    Refresh Rate: 240Hz
+                    Response Time: 3ms
+                    G-Sync
+                    Pantone Validated
+                    Support Dolby Vision HDR : Yes
+                </p>
+            </p>
+
+            <p class="text-t">
+                Camera:
+                <p class="text-c">
+                    720P HD camera
+            </p>
+
+            <p class="text-t">
+                I/O Ports:
+                <p class="text-c">
+                    1x 3.5mm Combo Audio Jack
+                    1x HDMI 2.1 FRL
+                    2x USB 3.2 Gen 2 Type-A (data speed up to 10Gbps)
+                    1x USB 3.2 Gen 2 Type-C with support for DisplayPort™ / power delivery / G-SYNC (data speed up to 10Gbps)
+                    1x RJ45 LAN port
+                    1x Thunderbolt™ 4 with support for DisplayPort™ (data speed up to 40Gbps)
+            </p>
+
+            
+
+        </div>
+
+    </div>
+
+</body>
+</html>
