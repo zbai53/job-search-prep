@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Left navigation bar style */
+    .sidebar {
+      width: 250px;
+      background-color: #333;
+      color: #fff;
+      padding: 15px;
+      overflow-y: auto;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+    }
+    .sidebar h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .sidebar ul {
+      list-style-type: none;
+    }
+    .sidebar li {
+      padding: 10px;
+      cursor: pointer;
+      position: relative;
+    }
+    .sidebar li:hover {
+      background-color: #444;
+    }
+    .sidebar li .submenu {
+      display: none;
+      padding-left: 15px;
+    }
+    .sidebar li.active .submenu {
+      display: block;
+    }
+
+    /* Show underline on mouse hover */
+    .sidebar li a:hover::after {
+      transform: scaleX(1); 
+    }   
+
+    /* relativize the positioning of an underline */
+    .sidebar li {
+      padding: 10px;
+      cursor: pointer;
+      position: relative; 
+    }
+
+    .sidebar li a {
+      text-decoration: none; 
+      color: #fff; 
+      display: inline-block; 
+      padding: 10px; 
+    }
+
+    /* Background color on hover */
+    .sidebar li a:hover {
+      background-color: #444; 
+    }
+
+    .sidebar li a::after {
+      content: ""; /* 创建一个空的内容 */
+      display: block; /* 设置为块级元素 */
+      height: 2px; /* 下划线的高度 */
+      width: 100%; /* 下划线的宽度 */
+      background-color: #fff; /* 下划线颜色 */
+      position: absolute; /* 绝对定位 */
+      left: 0; /* 从左侧开始 */
+      bottom: -5px; /* 距离底部的距离 */
+      transform: scaleX(0); /* 初始时不显示 */
+      transition: transform 0.3s ease; /* 动画效果 */
+    }
+
+    /* 顶部搜索栏样式 */
+    .topbar {
+      position: fixed;
+      top: 0;
+      left: 250px;
+      right: 0;
+      height: 60px;
+      background-color: #f4f4f4;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+      border-bottom: 1px solid #ccc;
+    }
+    .topbar input[type="text"] {
+      padding: 8px;
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    
+    .content {
+      margin-top: 60px; 
+      margin-left: 250px; 
+      padding: 20px;
+      overflow-y: auto;
+      width: 80%;
+      height: calc(100vh - 60px);
+    }
+
+    /* 表格样式 */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border: 1px solid #ddd;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+
+    /* Medium screens (tablets, max-width: 1024px) */
+    @media (max-width: 1024px) {
+        .sidebar {
+            width: 200px;
+        }
+        .topbar {
+            left: 200px;
+        }
+        .content {
+            margin-left: 200px;
+            width: calc(100% - 200px);
+        }
+        .topbar input[type="text"] {
+            width: 250px;
+        }
+    }
+
+    /* Small screens (landscape phones, max-width: 768px) */
+    @media (max-width: 768px) {
+        .sidebar {
+            width: 180px;
+            font-size: 0.9rem;
+        }
+        .topbar {
+            left: 180px;
+        }
+        .content {
+            margin-left: 180px;
+            width: calc(100% - 180px);
+        }
+        .topbar input[type="text"] {
+            width: 200px;
+        }
+        .sidebar h2 {
+            font-size: 1.2rem;
+        }
+    }
+
+    /* Extra-small screens (portrait phones, max-width: 480px) */
+    @media (max-width: 480px) {
+        .sidebar {
+            width: 100%;
+            position: relative;
+        }
+        .topbar {
+            left: 0;
+            width: 100%;
+        }
+        .content {
+            margin: 60px 0 0;
+            width: 100%;
+            padding: 10px;
+        }
+        .topbar input[type="text"] {
+            width: 70%;
+        }
+        .sidebar li {
+            padding: 8px;
+        }
+        .sidebar h2 {
+            font-size: 1.1rem;
+        }
+        .sidebar ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    
+  </style>
+</head>
+<body>
+  <!-- Left navigation bar -->
+  <div class="sidebar">
+    <h2>Navigation Bar</h2>
+    <ul>
+   
+      <li onclick="toggleSubmenu(this, 'users.html')">Users
+        <ul class="submenu" id="users-submenu">
+       </ul>
+      </li>
+
+      <li onclick="toggleSubmenu(this, 'computer.html')">Computer Models
+         <ul class="submenu" id="computer-submenu">
+          </ul>
+      </li>
+      <li onclick="toggleSubmenu(this, 'screening.html')" id="screeningLink">Screening Models</li>
+    </ul>
+  </div>
+
+
+  <div class="topbar">
+    <input type="text" placeholder="Search...">
+    <button>Search</button>
+  </div>
+
+  <!-- Main content -->
+  <div class="content" id="main-content">
+    <!-- Initial homepage content -->
+    <h1>Welcome to MainPage</h1>
+    
+
+    </button>
+   
+  </div>
+
+  <script src="js/lab3-p1.js"></script>
+  <script src="js/lab3-p1_3.js"></script>
+  <script src="js/lab3-p2_1.js"></script>
+</body>
+</html>
