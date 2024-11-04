@@ -77,19 +77,19 @@
     }
 
     .sidebar li a::after {
-      content: ""; /* 创建一个空的内容 */
-      display: block; /* 设置为块级元素 */
-      height: 2px; /* 下划线的高度 */
-      width: 100%; /* 下划线的宽度 */
-      background-color: #fff; /* 下划线颜色 */
-      position: absolute; /* 绝对定位 */
-      left: 0; /* 从左侧开始 */
-      bottom: -5px; /* 距离底部的距离 */
-      transform: scaleX(0); /* 初始时不显示 */
-      transition: transform 0.3s ease; /* 动画效果 */
+      content: ""; 
+      display: block; 
+      height: 2px; 
+      width: 100%; 
+      background-color: #fff;
+      position: absolute; 
+      left: 0; 
+      bottom: -5px; 
+      transform: scaleX(0); 
+      transition: transform 0.3s ease;
     }
 
-    /* 顶部搜索栏样式 */
+    /* Top search bar style */
     .topbar {
       position: fixed;
       top: 0;
@@ -121,7 +121,22 @@
       height: calc(100vh - 60px);
     }
 
-    /* 表格样式 */
+    .btnSearch{
+      font-size: small;
+      font-weight: 300;
+      width: 10%;
+      background-color: #05a1f5; 
+      border: 3px solid #ddd; 
+      border-radius: 8px; 
+      padding: 10px; 
+      box-shadow: 0 5px 10px rgba(10, 10, 10, 0.1);
+      /* margin-top: 4%; */
+      color: #ffffff;
+      position: relative;
+      overflow: hidden; 
+    }
+
+    /* Table styles */
     table {
       width: 100%;
       border-collapse: collapse;
@@ -228,8 +243,8 @@
 
 
   <div class="topbar">
-    <input type="text" placeholder="Search...">
-    <button>Search</button>
+    <input type="text" id="searchInput" placeholder="Search...">
+    <button onclick="performSearch()" class="btnSearch">Search</button>
   </div>
 
   <!-- Main content -->
@@ -238,7 +253,8 @@
     <h1>Welcome to MainPage</h1>
     
 
-    </button>
+    <div id="searchResults"></div>
+    <div id="modelList"></div>
    
   </div>
 
