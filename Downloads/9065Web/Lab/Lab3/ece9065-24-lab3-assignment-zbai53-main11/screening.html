@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computer filters</title>
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    .app {
+      display: flex;
+    }
+
+    aside {
+      padding: 1em;
+      width: 200px;
+      background-color: #ffffff;
+      border-right: 1px solid #ccc;
+    }
+
+    aside h2 {
+      font-size: 1.2em;
+    }
+
+    label {
+      display: block;
+      margin: 0.5em 0;
+    }
+
+    select {
+      width: 100%;
+      padding: 0.4em;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    main {
+      display: flex;
+      flex: 1;
+      padding: 1em;
+    }
+
+    #computerList, #computerDetails {
+      flex: 1;
+      margin: 0 1em;
+      background-color: #ffffff;
+      padding: 1em;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    #computers {
+      list-style: none;
+      padding: 0;
+    }
+
+    #computers li {
+      cursor: pointer;
+      padding: 0.8em;
+      border-bottom: 1px solid #ddd;
+    }
+
+    #computers li:hover {
+      background-color: #f9f9f9;
+    }
+
+    #detailsContent p {
+      margin: 0.5em 0;
+    }
+
+    #computerList h2, #computerDetails h2 {
+      margin-top: 0;
+    }
+
+
+    /* Larger tablets and laptops (max-width: 1024px) */
+    @media (max-width: 1024px) {
+      aside {
+        width: 250px;
+        padding: 1em;
+      }
+      main {
+        flex-direction: row;
+      }
+      #computerList, #computerDetails {
+        width: 45%;
+        margin: 0.5em;
+        padding: 1em;
+        font-size: 1rem;
+      }
+      #computerList h2, #computerDetails h2 {
+        font-size: 1.2rem;
+      }
+      #computers li {
+        padding: 0.8em;
+      }
+    }
+
+    /* Medium screens (tablets) */
+    @media (max-width: 768px) {
+      aside {
+        width: 100%;
+        max-width: none;
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 1em;
+      }
+      main {
+        flex-direction: column;
+      }
+      #computerList, #computerDetails {
+        margin: 0.5em 0;
+      }
+    }
+
+    /* Small screens (mobile devices) */
+    @media (max-width: 480px) {
+      aside h2 {
+        font-size: 1em;
+      }
+      label {
+        font-size: 0.5em;
+      }
+      aside select {
+        padding: 0.3em;
+        width: 10%;
+      }
+      #computerList h2, #computerDetails h2 {
+        font-size: 1em;
+      }
+      #computers li {
+        padding: 0.6em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside>
+      <h2>Filter</h2>
+      <label>Category:
+        <select id="categoryFilter" class="category">
+          <option value="All">All</option>
+          <option value="Laptop">Laptop</option>
+          <option value="Desktop">Desktop</option>
+          <option value="Mini PC">Mini PC</option>
+        </select>
+      </label>
+      <label>Manufacturing Company:
+        <select id="manufacturerFilter">
+          <option value="All">All</option>
+          <option value="Apple">Apple</option>
+          <option value="Dell">Dell</option>
+        </select>
+      </label>
+      <label>Sort:
+        <select id="sortFilter">
+          <option value="popularity">Popularity</option>
+          <option value="releaseDate">ReleaseDate</option>
+        </select>
+      </label>
+    </aside>
+    <main>
+      <section id="computerList">
+        <h2>Computer Model</h2>
+        <ul id="computers"></ul>
+      </section>
+      <section id="computerDetails">
+        <h2>Detailed Information</h2>
+        <div id="detailsContent">Select a computer model to view details</div>
+      </section>
+    </main>
+  </div>
+
+  <div id="searchResults"></div>
+  <div id="modelList" class="modelList"></div>
+  <script src="js/lab3-p2_1.js"></script>
+  <script src="js/lab3-p1.js"></script>
+  <script src="js/lab3-p1_3.js"></script>
+  <script>
+     document.addEventListener("DOMContentLoaded", () => {
+        loadComputers();
+        document.getElementById("categoryFilter").addEventListener("change", filterAndSortComputers);
+        document.getElementById("manufacturerFilter").addEventListener("change", filterAndSortComputers);
+        document.getElementById("sortFilter").addEventListener("change", filterAndSortComputers);
+    });
+  </script>
+</body>
+</html>
