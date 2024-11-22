@@ -1,0 +1,13 @@
+.addCartBtn {
+    background-color: #28a745;
+    border: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    margin-left: 50%;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .addCartBtn:hover {
+    background-color: #218838;
+    color: #fff;
+  }
