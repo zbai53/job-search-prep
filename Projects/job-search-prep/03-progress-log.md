@@ -37,6 +37,32 @@
 
 ---
 
+## 2026-07-09 · Day 2 · Dynamic SQL deep-dive + Buy/Sell Stock & Contains Duplicate
+
+**LeetCode:** Best Time to Buy and Sell Stock (two pointer) — solved; Contains Duplicate (HashMap) — solved
+**Study topic:** TransactionMapper.xml, MyBatis vs JPA, PageHelper
+**Applications sent:** Canada 0 · China 0
+**Mock interview:** No
+
+### Done
+- Read TransactionMapper.xml: understood all 4 queries (selectByFilter, selectByDateRange, selectCategoryStatistics, selectMonthlySummary)
+- Understood dynamic SQL: <where> + <if> tags, one query handles all filter combinations
+- Wrote 3 reasons for MyBatis over JPA: SQL control, cleaner dynamic SQL, interview relevance
+- Learned PageHelper concept: MyBatis interceptor, auto-appends LIMIT/OFFSET
+- Practiced "What is dynamic SQL?" answer in English
+- Best Time to Buy and Sell Stock: two pointer, understood why left jumps to right
+- Contains Duplicate: HashMap approach, learned simpler HashSet alternative
+
+### Struggled with
+- Couldn't find PageHelper in codebase (learned concept only)
+- getOrDefault syntax error (needs two params: key + default)
+
+### Tomorrow
+- Day 3: Read AiService / DeepSeek integration code
+- Understand SSE flow: SseEmitter → React EventSource
+- Write: SSE vs WebSocket comparison
+- LeetCode: Product of Array Except Self (Medium)
+
 ## 2026-07-08 · Day 1 · JWT security deep-dive + Two Sum & Valid Anagram
 
 **LeetCode:** Two Sum (HashMap) — solved; Valid Anagram (HashMap) — solved
