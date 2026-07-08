@@ -37,6 +37,32 @@
 
 ---
 
+## 2026-07-08 · Day 1 · JWT security deep-dive + Two Sum & Valid Anagram
+
+**LeetCode:** Two Sum (HashMap) — solved; Valid Anagram (HashMap) — solved
+**Study topic:** JwtAuthenticationFilter + SecurityFilterChain
+**Applications sent:** Canada 0 · China 0
+**Mock interview:** No
+
+### Done
+- Read JwtAuthenticationFilter line by line, understood full flow: extract token → validate → set SecurityContext
+- Understood why SSE needs query param fallback (EventSource can't set headers)
+- Read SecurityFilterChain: CSRF disabled, stateless session, route rules, addFilterBefore
+- Understood relationship: SecurityConfig registers JwtFilter at startup, Spring auto-executes per request
+- Practiced "Walk me through JWT auth" answer in English
+- Two Sum: learned HashMap pattern (查complement，存num)
+- Valid Anagram: HashMap frequency count, Java + Python
+
+### Struggled with
+- Understanding how SecurityConfig and JwtFilter relate at runtime (resolved)
+- Two Sum HashMap logic needed multiple walkthroughs before clicking
+
+### Tomorrow
+- Day 2: Read TransactionMapper.xml, understand dynamic SQL and every <if> tag
+- Write why MyBatis over JPA (3 bullet points)
+- Read PageHelper setup, explain SQL interception
+- LeetCode: Best Time to Buy and Sell Stock + Contains Duplicate
+
 ## Day 0 — Setup complete
 
 **Status:** Plan created. Project Knowledge uploaded. Ready to start Day 1.
