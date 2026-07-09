@@ -37,6 +37,31 @@
 
 ---
 
+## 2026-07-10 · Day 3 · AiService SSE streaming + Product of Array Except Self
+
+**LeetCode:** Product of Array Except Self (prefix/suffix) — solved with help, understood pattern
+**Study topic:** AiService code, SSE streaming, SSE vs WebSocket
+**Applications sent:** Canada 0 · China 0
+**Mock interview:** No
+
+### Done
+- Read AiService: understood categorizeTransaction, doStream (SSE), extractText, withRetry
+- Understood SSE streaming flow: Claude API streaming → extract text deltas → SseEmitter.send() → frontend EventSource → typewriter effect
+- Can explain SSE vs WebSocket choice in English (one-directional = SSE, bidirectional = WebSocket)
+- Practiced "How did you implement streaming?" answer in English
+- Product of Array Except Self: learned prefix/suffix pattern, understood left×right approach, coded in Python and Java
+
+### Struggled with
+- Prefix/suffix product logic took multiple passes (left*=nums[i] vs nums[i-1] difference between Python and Java)
+- Python range(n-1, -1, -1) syntax needed explanation
+
+### Tomorrow
+- Day 4: Read GlobalExceptionHandler
+- Trace what happens when ResourceNotFoundException is thrown
+- Practice full request lifecycle of POST /api/transactions in English
+- LeetCode: Maximum Subarray (Kadane's algorithm)
+- Boss直聘: set up profile, save 10 JDs
+
 ## 2026-07-09 · Day 2 · Dynamic SQL deep-dive + Buy/Sell Stock & Contains Duplicate
 
 **LeetCode:** Best Time to Buy and Sell Stock (two pointer) — solved; Contains Duplicate (HashMap) — solved
