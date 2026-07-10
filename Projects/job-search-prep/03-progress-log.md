@@ -37,6 +37,29 @@
 
 ---
 
+## 2026-07-10 · Day 4 · GlobalExceptionHandler + POST lifecycle + Kadane's algorithm
+
+**LeetCode:** Maximum Subarray (Kadane's) — solved
+**Study topic:** GlobalExceptionHandler, full request lifecycle of POST /api/transactions
+**Applications sent:** Canada 0 · China 0
+**Mock interview:** No
+
+### Done
+- Read GlobalExceptionHandler: understood 3 handlers (validation, runtime, catch-all)
+- Traced ResourceNotFoundException → handleRuntimeException → 400 response
+- Explained full POST /api/transactions lifecycle: Frontend → JwtFilter → SecurityConfig → Controller → Service → Mapper → DB → JSON response
+- Understood every request goes through JwtFilter + SecurityConfig, not just login
+- Maximum Subarray: learned Kadane's algorithm (current = max(current + nums[i], nums[i]))
+
+### Struggled with
+- Initially overcomplicated Maximum Subarray with nested loops
+- Confused request lifecycle order (thought SecurityConfig runs before JwtFilter)
+
+### Tomorrow
+- Day 5: Mock interview day — practice 5 questions out loud, record yourself
+- LeetCode: 3Sum (Medium) — two pointer pattern
+- Boss直聘: set up profile if not done, save 10 JDs
+
 ## 2026-07-10 · Day 3 · AiService SSE streaming + Product of Array Except Self
 
 **LeetCode:** Product of Array Except Self (prefix/suffix) — solved with help, understood pattern
