@@ -36,6 +36,30 @@
 ```
 
 ---
+## 2026-07-11 · Day 5 · Mock interview + 3Sum
+
+**LeetCode:** 3Sum (two pointer + dedup) — solved
+**Study topic:** Mock interview — 5 questions out loud in English
+**Applications sent:** Canada 0 · China 0
+**Mock interview:** Yes — Tell me about yourself, Finance Tracker walkthrough, MyBatis choice, JWT flow, SSE implementation
+
+### Done
+- Practiced all 5 mock interview questions out loud in English
+- Identified key weaknesses: filler words (um, uh, like), pronunciation (SSE Emitter, typewriter), mixing up JPA/GPA
+- Know all answers content-wise, English delivery needs daily practice
+- 3Sum: sorted array + fixed i + two pointer + dedup on i/left/right
+- Boss直聘 profile set up, 10 JDs saved
+
+### Struggled with
+- English fluency — too many filler words, key terms unclear
+- 3Sum dedup logic — understood after breaking into "3 places duplicates can happen"
+
+### Tomorrow
+- Day 6: System design — URL shortener
+- Clarify requirements, core entities, hashing, database choice, cache layer
+- LeetCode: Container With Most Water (Medium)
+- Apply to 5 positions on Boss直聘
+
 
 ## 2026-07-10 · Day 4 · GlobalExceptionHandler + POST lifecycle + Kadane's algorithm
 
