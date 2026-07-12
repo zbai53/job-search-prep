@@ -36,6 +36,28 @@
 ```
 
 ---
+
+## 2026-07-12 · Day 6 · URL Shortener System Design + Container With Most Water
+
+**LeetCode:** Container With Most Water (two pointer) — solved
+**Study topic:** URL Shortener system design
+**Applications sent:** Canada 0 · China 5
+**Mock interview:** No
+
+### Done
+- URL Shortener system design: requirements → API → base62 encoding → MySQL schema → Redis cache → read/write flow
+- Understood Redis as in-memory cache vs MySQL as persistent storage
+- Understood HTTP 301 redirect mechanism
+- Understood cache hit/miss flow
+- Container With Most Water: two pointer, fixed ordering bug (calculate before compare)
+
+### Struggled with
+- Why system design is tested (separate interview track, not project-related)
+- Redis vs 301 confusion (cache vs redirect — two different things)
+- Container With Most Water: curArea/maxArea ordering
+
+### Tomorrow
+- Day 7 — REST. No coding, no studying. Non-negotiable.
 ## 2026-07-11 · Day 5 · Mock interview + 3Sum
 
 **LeetCode:** 3Sum (two pointer + dedup) — solved
