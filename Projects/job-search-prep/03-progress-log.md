@@ -37,6 +37,33 @@
 
 ---
 
+## 2026-07-15 · Day 8 · AI Career Agent architecture + Stock II & Longest Substring
+
+**LeetCode:** Best Time to Buy and Sell Stock II — solved; Longest Substring Without Repeating Characters (sliding window) — solved
+**Study topic:** AI Career Agent LangGraph workflow + state
+**Applications sent:** Canada 0 · China 0
+**Mock interview:** No
+
+### Done
+- Read workflow.py: understood 6 agents, node flow, conditional routing (score < 70 → rewrite, >= 70 → interview)
+- Read state.py: understood shared state dictionary (inputs, agent results, flow control, monitoring)
+- Understood key design decisions: conditional routing, rewrite cap of 2, error handler after every node, retry wrapper
+- Practiced "Walk me through your AI Career Agent architecture" in Chinese and English
+- Stock II: understood greedy approach — add every positive daily difference
+- Longest Substring: learned sliding window pattern — move left pointer on duplicate, don't clear map
+
+### Struggled with
+- Stock II: confused about whether selling early could miss bigger profits (resolved — daily differences sum to same result)
+- Longest Substring: initially cleared map on duplicate, learned to move left pointer instead
+- Off-by-one: >= vs > for left boundary check
+
+### Tomorrow
+- Day 9: Read ResumeAgent and JDAgent completely
+- Understand structured output and malformed JSON handling
+- Explain in Chinese: "我们的简历解析Agent是怎么工作的？"
+- LeetCode: Minimum Window Substring (Hard)
+- Boss直聘: apply to 5 more positions
+
 ## 2026-07-12 · Day 6 · URL Shortener System Design + Container With Most Water
 
 **LeetCode:** Container With Most Water (two pointer) — solved
