@@ -37,6 +37,32 @@
 
 ---
 
+## 2026-07-16 · Day 9 · ResumeAgent & JDAgent + Minimum Window Substring
+
+**LeetCode:** Minimum Window Substring (Hard) — studied solution/template
+**Study topic:** ResumeAgent, JDAgent, structured output, malformed JSON handling
+**Applications sent:** Canada 0 · China 5
+**Mock interview:** No
+
+### Done
+- Read ResumeAgent: text extraction (PDF/DOCX) → PII masking → Claude + JSON schema → Pydantic validation → retry with error feedback
+- Read JDAgent: text or URL input → BeautifulSoup for URL scraping → same Claude + Pydantic pattern
+- Understood key differences: ResumeAgent has PII protection, JDAgent has URL fetching
+- Understood Pydantic: schema validation library, checks Claude's output has correct fields and types
+- Understood retry logic: validation fails → add error details to prompt → retry once → still fails → throw exception
+- Practiced "如果Claude返回的JSON格式不对怎么办？" in Chinese and English
+- Boss直聘: applied to 5 more positions
+
+### Struggled with
+- Pydantic concept was new, resolved quickly
+
+### Tomorrow
+- Day 10: Read RAG pipeline
+- Understand: how does Qdrant store and retrieve vectors?
+- Explain: semantic search vs keyword search
+- Write: when would RAG fail? What are its limitations?
+- LeetCode: Group Anagrams (Medium) + Top K Frequent Elements (Medium)
+
 ## 2026-07-15 · Day 8 · AI Career Agent architecture + Stock II & Longest Substring
 
 **LeetCode:** Best Time to Buy and Sell Stock II — solved; Longest Substring Without Repeating Characters (sliding window) — solved
