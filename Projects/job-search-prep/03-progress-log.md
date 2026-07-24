@@ -43,6 +43,33 @@
 
 ---
 
+## 2026-07-17 · Day 10 · RAG pipeline + Group Anagrams & Top K Frequent
+
+**LeetCode:** Group Anagrams (HashMap) — solved; Top K Frequent Elements (Heap + Bucket Sort) — solved
+**Study topic:** RAG pipeline, Qdrant vector store, embedding service
+**Applications sent:** Canada 0 · China 0
+**Mock interview:** No
+
+### Done
+- Read vector_store.py: understood Qdrant collection creation, upsert (store vectors), search (cosine similarity, top-k, filters)
+- Read embeddings.py: understood all-MiniLM-L6-v2 model, 384-dim vectors, lazy loading
+- Understood full RAG pipeline: text → embedding → store in Qdrant → query → retrieve → inject into Claude prompt → generate answer
+- Can explain semantic search vs keyword search
+- Can explain RAG limitations (bad chunking, irrelevant retrieval, embedding model weakness, missing data)
+- Group Anagrams: sorted string as key, HashMap grouping
+- Top K Frequent: learned both Heap (O(n log k)) and Bucket Sort (O(n)) approaches
+
+### Struggled with
+- Bucket sort concept took multiple explanations (array index = frequency, naturally ordered)
+- Java capitalization: putIfAbsent, Integer
+
+### Tomorrow
+- Day 11: Read MatchAgent scoring logic
+- Understand 3 scoring dimensions (skill 45%, experience 30%, keyword 25%)
+- Explain in Chinese: "你的简历匹配算法是怎么设计的？"
+- LeetCode: Longest Consecutive Sequence (Medium)
+- Apply to 5 more China positions
+
 ## 2026-07-16 · Day 9 · ResumeAgent & JDAgent + Minimum Window Substring
 
 **LeetCode:** Minimum Window Substring (Hard) — studied solution/template
